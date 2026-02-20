@@ -1,0 +1,30 @@
+{% extends 'lessons/index.html' %}
+{% load static %}
+{% block title %}Додати заняття{% endblock %}
+
+{% block page %}
+
+<div class="form-container">
+    <h1>Форма для додавання занять</h1>
+
+    <form method="post">
+        {% csrf_token %}
+
+        {% for field in form %}
+            <div class="form-row">
+                <label for="{{ field.id_for_label }}">
+                    {{ field.label }}
+                </label>
+                {{ field }}
+            </div>
+        {% endfor %}
+
+        <div class="form-row">
+            <button type="submit" class="btn-save">Зберегти</button>
+        </div>
+    </form>
+
+    <img src="{% static 'form_app/images/math05.png' %}" class="logo">
+</div>
+
+{% endblock %}

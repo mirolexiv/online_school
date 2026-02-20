@@ -1,0 +1,16 @@
+{% extends 'lessons/index.html' %}
+{% load static %}
+{% block title %}Про{% endblock %}
+
+{% block page %}
+   {% if request.user.is_authenticated %}
+    <h2>Вітаю {{ request.user.username }} ви зайшли на сайт адміністрування онлайн школи</h2>
+        <img style="width: 20%;display: block;margin: 0 auto;" src="{% static 'lessons/images/logoSchool.png' %}">
+     {% else %}
+      <h2>Це проєкт про онлайн школу. База данних уроків, учнів, вчителів.</h2>
+
+    {% endif %}
+
+{% endblock page %}
+
+

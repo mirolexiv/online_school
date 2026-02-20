@@ -1,0 +1,15 @@
+{% extends 'lessons/index.html' %}
+{% load static %}
+
+{% block title %}Редагування{% endblock %}
+
+{% block page %}
+<h2>Редагування учня</h2>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Зберегти</button>
+</form>
+
+{% endblock %}

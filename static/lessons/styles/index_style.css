@@ -1,0 +1,351 @@
+/* Загальні стилі */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+/* Горизонтальне меню */
+.mainmenu {
+    display: flex;
+    align-items: center;       /* вертикальне центрування */
+    list-style: none;
+    background: #222;
+    height: 60px;              /* ← фіксована висота */
+    padding: 0 25px;           /* тільки горизонтальний відступ */
+    margin: 0;
+}
+
+.mainmenu li {
+    margin-right: 25px;
+    display: flex;
+    align-items: center;       /* щоб svg і текст були по центру */
+}
+
+.mainmenu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 6px;                  /* відступ між іконкою і текстом */
+}
+
+.mainmenu a:hover {
+    color: #4CAF50;
+}
+
+.mainmenu a {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 4px;
+    transition: 0.3s ease;
+}
+
+.mainmenu a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%;
+    height: 2px;
+    background: #4CAF50;
+    transition: 0.3s ease;
+}
+
+.mainmenu a:hover {
+    color: #4CAF50;
+}
+
+.mainmenu a:hover::after {
+    width: 100%;
+}
+
+.mainmenu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    background: linear-gradient(90deg, #1f1f1f, #2a2a2a);
+    height: 65px;
+    padding: 0 35px;
+    margin: 0;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+.mainmenu a.active {
+    color: #4CAF50;
+    font-weight: 600;
+}
+
+.mainmenu li:last-child a {
+    background: #4CAF50;
+    padding: 8px 14px;
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+
+.mainmenu li:last-child a:hover {
+    background: #3e9443;
+    transform: translateY(-2px);
+}
+
+.mainmenu li {
+    margin-right: 25px;
+    display: flex;
+    align-items: center;
+    transition: 0.2s ease;
+}
+
+.mainmenu li:hover {
+    transform: translateY(-2px);
+}
+
+
+/* Користувач праворуч */
+.user {
+    color: #4CAF50;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+
+/* Layout */
+.layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Ліва панель */
+.sidebar {
+    width: 220px;
+    padding: 25px 20px;
+    background: #ffffff;
+    box-shadow:
+        8px 0 30px rgba(0, 0, 0, 0.05);
+    border-right: 1px solid #eee;
+    font-size: 20px;
+}
+
+/* Список */
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Пункт меню */
+.sidebar li {
+    margin-bottom: 12px;
+}
+
+/* Посилання */
+.sidebar a {
+    display: block;
+    padding: 12px 15px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: all 0.25s ease;
+}
+
+/* Hover */
+.sidebar a:hover {
+    background: #f3f3f3;
+    transform: translateX(5px);
+}
+
+/* Активний пункт (можна додати клас active) */
+.sidebar a.active {
+    background: #000;
+    color: #fff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.sidebar {
+    animation: slideIn 0.5s ease forwards;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Контент */
+
+.content h1{
+    text-align: center; }
+
+.content {
+    flex: 1;
+    padding: 30px;
+}
+.content table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+.content td, th {
+  border: 2px solid #26282B;
+  text-align: center;
+  padding: 8px;
+  font-size: 18px;
+}
+.content th {
+  font-size: 22px;
+}
+
+.content tr:nth-child(even) {
+  background-color: #ddd;
+}
+.content img {
+    width: 50%;
+    display: block;
+    margin: 20px auto;  /* центрування */
+}
+
+
+.form-container {
+    width: 600px;
+    margin: 0 auto;   /* центрує всю форму */
+}
+
+form {
+    margin-top: 30px;
+}
+
+.form-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.form-row label {
+    width: 200px;        /* фіксована ширина */
+    text-align: left;    /* тепер текст ліворуч */
+    margin-right: 15px;
+    font-weight: bold;
+}
+
+.form-row input,
+.form-row select,
+.form-row textarea {
+    width: 300px;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.btn-save {
+    width: 300px;
+    margin-left: 215px; /* щоб кнопка була під полями */
+    padding: 10px;
+    cursor: pointer;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #f9f9f9, #eaeaea);
+}
+
+.login-wrapper {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 15px;
+}
+
+.login-card {
+    width: 460px; /* трохи ширше для реєстрації */
+    padding: 55px 50px;
+    background: #ffffff;
+    border-radius: 18px;
+    box-shadow:
+        0 30px 70px rgba(0, 0, 0, 0.18),
+        0 10px 25px rgba(0, 0, 0, 0.07);
+    animation: fadeIn 0.6s ease forwards;
+    transition: 0.3s ease;
+}
+
+.login-card h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 14px;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    background: #fafafa;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #000;
+    background: #ffffff;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.12);
+}
+
+.btn-login {
+    width: 100%;
+    padding: 14px;
+    margin-top: 15px;
+    border-radius: 12px;
+    border: none;
+    background: #000;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-login:hover {
+    background: #222;
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
