@@ -7,6 +7,9 @@
 
 🔗 Live: https://online-school-38x8.onrender.com/
 
+login: admin
+password:123
+
 ## 🛠️ Технології
 
 * Python 3
