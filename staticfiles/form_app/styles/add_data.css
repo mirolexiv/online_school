@@ -1,0 +1,108 @@
+/* Загальні стилі */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Горизонтальне меню */
+.mainmenu {
+    display: flex;
+    list-style: none;
+    background: #222;
+    padding: 15px 20px;
+    margin: 0;
+}
+
+.mainmenu li {
+    margin-right: 25px;
+}
+
+.mainmenu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.mainmenu a:hover {
+    color: #4CAF50;
+}
+
+/* Layout */
+.layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Ліва панель */
+.sidebar {
+    width: 150px;
+    background: #f4f4f4;
+    padding: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin-bottom: 15px;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+}
+
+.sidebar a:hover {
+    color: #007bff;
+}
+
+/* Контент */
+
+.content {
+    flex: 1;
+    padding: 30px;
+}
+.content table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+.content td, th {
+  border: 2px solid #26282B;
+  text-align: center;
+  padding: 8px;
+}
+.content tr:nth-child(even) {
+  background-color: #ddd;
+}
+.content img{
+    width: 20%;
+}
+
+
+
+.content h1{
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.content button{
+    background-color: #4a90e2;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.content form{
+    max-width: 400px;
+    margin: 0 auto;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    box-shadow: 0 4p 8px rgba(0,0,0,0.1);
+    padding: 20px;
+}
