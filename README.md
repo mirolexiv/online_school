@@ -91,71 +91,10 @@ python manage.py runserver
 
 ---
 
-## 🌐 Деплой на Render
 
-1. Підключити GitHub репозиторій
-2. Створити Web Service
-3. Вказати:
-
-**Build Command:**
-
-```
-./build.sh
-```
-
-**Start Command:**
-
-```
-gunicorn online_school.wsgi
-```
-
----
-
-### 🔐 Environment Variables
-
-```
-SECRET_KEY=...
-DEBUG=False
-ALLOWED_HOSTS=your-app.onrender.com
-DATABASE_URL=postgres://...
-```
-
----
-
-## 📦 Статичні файли
-
-```
-python manage.py collectstatic
-```
-
----
-
-## 👤 Адмін
-
-```
-python manage.py createsuperuser
-```
-
----
-
-## ⚠️ Безпека
-
-* Не зберігайте `.env` у Git
-* Використовуйте Environment Variables у продакшн
-
----
 
 ## 📌 Автор
 
 GitHub: https://github.com/mirolexiv
 
----
 
-## 💡 Майбутні покращення
-
-* Авторизація користувачів
-* Завантаження медіа файлів
-* REST API
-* Frontend (React/Vue)
-
----
